@@ -207,6 +207,7 @@ else {
 */
 
 // Switch statement
+/*
 var job = "driver";
 switch (job) {
   case "teacher":
@@ -232,4 +233,19 @@ switch (true) {
         break;
     default:
         console.log(firstName + ' is a man');
+}
+*/
+
+var height;
+height = 23;
+if (height || height === 0) {
+    console.log('Variable is defined');
+}
+else {
+    console.log('Variable has NOT been defined');
+}
+
+// Equality operators 
+if (height == '23') {
+    console.log('The == operator does type coercion!');
 }
