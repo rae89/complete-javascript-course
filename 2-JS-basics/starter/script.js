@@ -186,7 +186,7 @@ else {
 /*********************************
  * The Ternary Operator and Switch Statements
  */
-
+/*
 var firstName = "John";
 var age = 16;
 
@@ -196,7 +196,7 @@ age >= 18
 
 var drink = age >= 18 ? "beer" : "juice";
 console.log(drink);
-
+*/
 /*
 if (age >= 18) {
     var drink = 'beer';
@@ -255,7 +255,7 @@ if (height == '23') {
 /******************************************
  * Functions
  */
-
+/*
 function calculateAge(birthYear) {
   return 2018 - birthYear;
 }
@@ -283,4 +283,30 @@ function yearsUntilRetirement(year, firstName)
 yearsUntilRetirement(1990, 'John');
 yearsUntilRetirement(1948, 'Mike');
 yearsUntilRetirement(1969, 'Jane');
+*/
+
+/*********************************************
+ * Function Statements and Expressions
+ */
+
+// Function declaration
+// function whatDoYouDo(job, firstName)
+
+// Function expresssion
+var whatDoYouDo = function(job, firstName) {
+  switch (job) {
+    case "teacher":
+      return firstName + " teaches kids how to code";
+    case "driver":
+      return firstName + " drives a cab in Lisbon.";
+    case "designer":
+      return firstName + " designs beautiful websites";
+    default:
+      return firstName + " does something else";
+  }
+};
+
+console.log(whatDoYouDo("teacher", "John"));
+console.log(whatDoYouDo("designer", "Jane"));
+console.log(whatDoYouDo("retired", "Mark"));
 
