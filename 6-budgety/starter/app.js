@@ -8,7 +8,7 @@ var budgetController = (function() {
 
   Expense.prototype.calcPercentage = function(totalIncome) {
     if (totalIncome > 0) {
-      this.percentage = (this.value / totalIncome) * 100;
+      this.percentage = Math.round((this.value / totalIncome) * 100);
     } else {
       this.percentage = -1;
     }
