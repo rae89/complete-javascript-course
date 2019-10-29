@@ -341,3 +341,28 @@ const boxes = document.querySelectorAll('.box');
 const all = [h, ...boxes];
 
 Array.from(all).forEach(cur => cur.style.color = 'purple');
+
+
+
+///////////////////////////////////////////////////////////////
+// Lecture: Res parameters
+
+//ES5
+function isFullAges5(limit) {
+  var argsArr = Array.prototype.slice.call(arguments, 1);
+
+  argsArr.forEach(function(cur) {
+    console.log((2016 - cur) >= limit);
+  })
+}
+
+isFullAges5(21, 1990, 1999, 1965);
+//isFullAges5(1990, 1999, 1965, 2016, 1987);
+
+//ES6
+function isFullAge6(limit,...years) {
+  years.forEach(cur => console.log((2016 - cur) >= limit));
+  console.log(years);
+}
+isFullAge6(16, 1990, 1999, 1965);
+
