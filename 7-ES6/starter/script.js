@@ -314,7 +314,7 @@ console.log(ages.find(cur => cur >= 18));
 
 /////////////////////////////////////////////////////////
 // Lecture: Spread operator
-
+/*
 function addFourAges (a, b, c, d) {
   return a + b + c + d;
 }
@@ -341,12 +341,12 @@ const boxes = document.querySelectorAll('.box');
 const all = [h, ...boxes];
 
 Array.from(all).forEach(cur => cur.style.color = 'purple');
-
+*/
 
 
 ///////////////////////////////////////////////////////////////
 // Lecture: Res parameters
-
+/*
 //ES5
 function isFullAges5(limit) {
   var argsArr = Array.prototype.slice.call(arguments, 1);
@@ -365,4 +365,36 @@ function isFullAge6(limit,...years) {
   console.log(years);
 }
 isFullAge6(16, 1990, 1999, 1965);
+*/
 
+//////////////////////////////////////////////////////////////
+// Lecture: Default parameters
+
+//ES5
+/*
+function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
+
+  lastName === undefined ? lastName = 'Smith' : lastName = lastName;
+  nationality === undefined ? nationality = 'american': nationality = nationality;
+
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.yearOfBirth = yearOfBirth;
+  this.nationality = nationality;
+}
+
+var john = new SmithPerson('John', 1990);
+var emily = new SmithPerson('Emily', 1983, 'Diaz', 'spanish');
+*/
+
+//ES6
+function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'american') {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.yearOfBirth = yearOfBirth;
+  this.nationality = nationality;
+}
+
+
+var john = new SmithPerson('John', 1990);
+var emily = new SmithPerson('Emily', 1983, 'Diaz', 'spanish');
